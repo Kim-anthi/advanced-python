@@ -68,3 +68,8 @@ diction.update(diction2)
 print(diction)
 
 #possible key types
+dictionary = {3: 9, 6: 36, 9: 81}
+print(dictionary)
+
+value = dictionary[3] #accessed using key instead of index
+print(value)
