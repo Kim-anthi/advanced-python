@@ -22,3 +22,16 @@ else:
   print("everything is fine")
 finally:
   print("cleaning up...")
+  
+  #own error classes
+class ValueTooHighError(Exception):
+    pass
+  
+def test_value(x):
+    if x > 100:
+      raise ValueTooHighError("value too high")
+
+try:
+  test_value(200) 
+except ValueTooHighError as e:
+  print(e)
