@@ -1,0 +1,37 @@
+#PROCESS - instance of a program
+#takes advantage of multiple cpu's and cores
+#separate memory space
+#great for CPU-bound processing
+#new process is started independently from other processes
+#process are killable
+#one GIL for each process so no limitation --> Global Interpreter lock
+
+#disadvantage
+#heavyweight
+#starting a process is slower than starting a thread
+#more memory
+#Inter process communication is more complicated 
+
+
+#THREADS - entity within process that can be scheduled
+#process that can spawn multiple threads
+#all threads within  process share same way
+#starting a thread is faster than starting process
+#great for 1/0-bounds tasks
+#sharing data is easy since all data is in same memory space
+
+#disadvantage
+#limited by GIL - one thread at a time
+#no effect for CPU-based tasks
+#not killable
+#careful with race conditions
+
+
+#GIL --> Global Intepreter Lock
+#lock that allows execution of only one thread at time 
+#needed in cpython because memeory management isn't safe
+
+# ways to AVOID GIL 
+# use multiprocessing
+#use different, free threaded python implementation
+#use python as a wrapper for 3rd party libraries

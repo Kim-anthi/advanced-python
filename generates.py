@@ -83,7 +83,12 @@ fib = fibonacci(30)
 for i in fib:
   print(i)
   
-  
-mygenerator = ( i for i in range(10) if i % 2 == 0)
+ 
+import sys 
+mygenerator = ( i for i in range(100000) if i % 2 == 0)
 # for i in mygenerator:
-print(list(mygenerator)) #converting to list
+print(sys.getsizeof(mygenerator)) #converting to list
+
+mylist = [i for i in range(100000) if i % 2 == 0]
+# for i in mygenerator:
+print(sys.getsizeof(mylist)) 
