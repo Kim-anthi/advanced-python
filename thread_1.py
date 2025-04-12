@@ -1,3 +1,5 @@
+# In multithreading, all threads share the same memory space.
+# but use Locks to avoid race conditions.
 
 from threading import Thread
 import os
